@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+function Umur(props) {
+  return (
+    <span>saya berumur {props.age} tahun.</span>
+  )
+}
+
 function PanggilNama(props) {
   return (
-    <p>Hallo, perkenalkan nama saya {props.nama}</p>
+    <p>Hallo, perkenalkan nama saya {props.nama} dan <Umur age={props.umur}/></p>
   )
 }
 
@@ -12,7 +18,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <PanggilNama nama="Riki Widiantoro" />
+        <PanggilNama nama="Riki Widiantoro" umur="22"/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
