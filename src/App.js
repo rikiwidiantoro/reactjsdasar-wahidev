@@ -9,7 +9,13 @@ function Umur(props) {
 
 function PanggilNama(props) {
   return (
-    <p>Hallo, perkenalkan nama saya {props.nama} dan <Umur age={props.umur}/></p>
+    <p>Hallo, <Ucapan/> perkenalkan nama saya {props.nama} dan <Umur age={props.umur}/></p>
+  )
+}
+
+function Ucapan() {
+  return (
+    <span>Selamat Datang!</span>
   )
 }
 
