@@ -1,13 +1,13 @@
-// // const
+// // const | scope
 // const harga = 3000
 
-// let
+// let | scope
 // let harga = 3000
 // if(true) {
 //     let harga = 30
 // }
 
-// var
+// var | global
 var harga = 3000
 if(true) {
     var harga = 30
