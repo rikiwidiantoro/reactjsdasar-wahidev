@@ -1,11 +1,39 @@
+// import React from "react"
 
+import { Component } from "react";
 
+// // function component
+// function Navbar() {
+//     return (
+//         <h4>ini adalah teks Navbar function component</h4>
+//     )
+// }
 
-// function component
-function Navbar() {
-    return (
-        <h4>ini adalah teks Navbar</h4>
-    )
+// export default Navbar
+
+// // penulisan lain function component >> export default digabung
+// export default function Navbar() {
+//     return (
+//         <h4>ini adalah teks Navbar function component yg export default nya digabung</h4>
+//     )
+// }
+
+// // class component
+// class Navbar extends Component {
+//     render() {
+//         return (
+//             <h4>ini adalah teks Navbar class component</h4>
+//         )
+//     }
+// }
+
+// export default Navbar
+
+// penulisan lain class component >> export default digabung
+export default class Navbar extends Component {
+    render() {
+        return (
+            <h4>ini adalah teks Navbar class component yg export default nya digabung</h4>
+        )
+    }
 }
-
-export default Navbar
