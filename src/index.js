@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
+import Variabel from './variabel/Variabel';
 // import reportWebVitals from './reportWebVitals';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Variabel />
   </React.StrictMode>,
   document.getElementById('root')
 );
