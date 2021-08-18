@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 // import './App.css';
+import Header from './komponen/Header';
 import Navbar from './komponen/Navbar';
 
 // // pakai arrow component
@@ -17,7 +18,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h2>Hello World!</h2>
+      <Header />
+      <h1>Hello World!</h1>
     </div>
   );
 }
