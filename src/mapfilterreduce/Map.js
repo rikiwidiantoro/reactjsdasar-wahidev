@@ -19,6 +19,13 @@ const makanans = [
     }
 ]
 
+// reduce() >> mengeksekusi nilai pada setiap element dengan tipe array dan menampilkan dalam sebuah nilai saja
+const totalHargaMenu = makanans.reduce((totalMakanan, makanan) => {
+    return (
+        totalMakanan + makanan.harga
+    )
+}, 0)
+
 const Map = () => {
     return (
         <div>
@@ -35,6 +42,10 @@ const Map = () => {
                 {makanans.filter((makanan) => makanan.harga > 11000)
                 .map((makanan) => <li>{makanan.nama} - harganya Rp.{makanan.harga}</li>)}
             </ul>
+
+            {/* reduce() */}
+            <h1>Reduce || total harga semua makanan</h1>
+            <p>Total semua makanan Rp.{totalHargaMenu}</p>
         </div>
     )
 }
