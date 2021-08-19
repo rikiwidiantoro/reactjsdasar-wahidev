@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Variabel from './variabel/Variabel';
 import StateProps from './StateProps/StateProps'
+import Map from './mapfilterreduce/Map'
 // import reportWebVitals from './reportWebVitals';
 
 
@@ -11,7 +12,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Variabel /> */}
-    <StateProps />
+    {/* <StateProps /> */}
+    <Map />
   </React.StrictMode>,
   document.getElementById('root')
 );
