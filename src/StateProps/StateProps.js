@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Operan from "./Operan";
 
 class StateProps extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class StateProps extends Component {
         }
     }
 
-    GantiMakanan(makananBaru) {
+    GantiMakanan = (makananBaru) => {
         this.setState({
             makanan: makananBaru
         })
@@ -21,6 +22,8 @@ class StateProps extends Component {
                 <p>Nama makanan = <strong>{this.state.makanan}</strong></p>
                 {/* <button onClick={()=> this.setState({makanan:'Soto'})}>Ganti Makanan</button> */}
                 <button onClick={()=> this.GantiMakanan('Soto')}>Ganti Makanan</button>
+
+                <Operan makanan={this.state.makanan} GantiMakanan={this.GantiMakanan}/>
             </div>
         )
     }
