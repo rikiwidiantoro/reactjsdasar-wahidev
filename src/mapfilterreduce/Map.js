@@ -1,4 +1,5 @@
 import React from "react"
+// import Filter from "./Filter"
 
 const makanans = [
     {
@@ -29,6 +30,7 @@ const totalHargaMenu = makanans.reduce((totalMakanan, makanan) => {
 const Map = () => {
     return (
         <div>
+
             {/* map() >> memecah/menampilkan array saru persatu */}
             <h1>Map() Sederhana</h1>
             <h3>Menu : </h3>
@@ -46,6 +48,7 @@ const Map = () => {
             {/* reduce() */}
             <h1>Reduce || total harga semua makanan</h1>
             <p>Total semua makanan Rp.{totalHargaMenu}</p>
+            
         </div>
     )
 }
