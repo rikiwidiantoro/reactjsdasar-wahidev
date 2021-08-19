@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
 import Variabel from './variabel/Variabel';
+import StateProps from './StateProps/StateProps'
 // import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Variabel />
+    {/* <Variabel /> */}
+    <StateProps />
   </React.StrictMode>,
   document.getElementById('root')
 );
