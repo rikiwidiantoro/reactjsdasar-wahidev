@@ -5,8 +5,10 @@ import ReactDOM from 'react-dom';
 // import Variabel from './dasar/variabel/Variabel';
 // import StateProps from './dasar/StateProps/StateProps'
 // import Map from './dasar/mapfilterreduce/Map'
-import Lifecycle from './dasar/lifecycle/Lifecycle'
+// import Lifecycle from './dasar/lifecycle/Lifecycle'
 // import reportWebVitals from './reportWebVitals';
+
+import Crud from './crud/index'
 
 
 ReactDOM.render(
@@ -15,7 +17,8 @@ ReactDOM.render(
     {/* <Variabel /> */}
     {/* <StateProps /> */}
     {/* <Map /> */}
-    <Lifecycle />
+    {/* <Lifecycle /> */}
+    <Crud />
   </React.StrictMode>,
   document.getElementById('root')
 );
