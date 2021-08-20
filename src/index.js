@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 // import App from './App';
-// import Variabel from './variabel/Variabel';
-// import StateProps from './StateProps/StateProps'
-// import Map from './mapfilterreduce/Map'
-import Lifecycle from './lifecycle/Lifecycle'
+// import Variabel from './dasar/variabel/Variabel';
+// import StateProps from './dasar/StateProps/StateProps'
+// import Map from './dasar/mapfilterreduce/Map'
+import Lifecycle from './dasar/lifecycle/Lifecycle'
 // import reportWebVitals from './reportWebVitals';
 
 
