@@ -1,18 +1,16 @@
+import React from "react";
+import {Navbar, Container} from 'react-bootstrap'
+
 const Footer = () => {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" className="mt-5">
             <Container>
                 <Navbar.Brand href="#home">
-                    <img
-                    alt=""
-                    src="/logo.svg"
-                    width="30"
-                    height="30"
-                    className="d-inline-block align-top"
-                    />{' '}
-                React Bootstrap
+                    <p>dibuat oleh Riki Widiantoro dengan mengikuti latihan React Js Dasar di channel Wahidev Academy</p>
                 </Navbar.Brand>
             </Container>
         </Navbar>
     )
 }
+
+export default Footer;
