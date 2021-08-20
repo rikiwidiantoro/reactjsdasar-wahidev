@@ -8,7 +8,8 @@ import ReactDOM from 'react-dom';
 // import Lifecycle from './dasar/lifecycle/Lifecycle'
 // import reportWebVitals from './reportWebVitals';
 
-import Crud from './crud/index'
+import Crud from './crud/index';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM.render(
