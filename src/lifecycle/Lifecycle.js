@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Sub from "./Sub";
 
 class Lifecycle extends Component {
     constructor(props) {
@@ -6,7 +7,8 @@ class Lifecycle extends Component {
 
         this.state = {
             makanan: 'Bakso',
-            data: {}
+            data: {},
+            tampil: false
         }
     }
 
@@ -35,8 +37,13 @@ class Lifecycle extends Component {
                 <p>makanan : {this.state.makanan}</p>
                 <p>Data : {this.state.data.title}</p>
                 <hr />
+
                 <h2>Ubah Makanan</h2>
                 <h4>{this.state.makanan}</h4>
+
+                {this.state.tampil && <Sub ubahMakanan={(value) => this.ubahMakanan(value)}/>}
+
+                <button onClick={() => this.setState({tampil : !this.state.tampil})}>Tampil!</button>
             </div>
         )
     }
