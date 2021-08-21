@@ -1,7 +1,7 @@
 import React from "react";
 import {Table, thead, tbody, tr, th, td} from 'react-bootstrap'
 
-const Tabel = () => {
+const Tabel = ({makanans}) => {
     return (
         <Table striped bordered hover className="mt-5">
             <thead>
@@ -14,7 +14,7 @@ const Tabel = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                {/* <tr>
                     <td>1</td>
                     <td>Mie Ayam Bakso</td>
                     <td>Mie Ayam Bakso khas Wonogiri</td>
@@ -31,7 +31,17 @@ const Tabel = () => {
                     <td>Nasi Goreng</td>
                     <td>Nasi goreng spesial dengan banyak kondimen</td>
                     <td>Rp. 10.000</td>
-                </tr>
+                </tr> */}
+                {makanans.map((makanan, index) => {
+                    return (
+                        <tr>
+                            <td>{index+1}</td>
+                            <td>{makanan.nama}</td>
+                            <td>{makanan.deskripsi}</td>
+                            <td>Rp. {makanan.harga}</td>
+                        </tr>
+                    )
+                })}
             </tbody>
         </Table>
     )

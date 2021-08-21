@@ -26,7 +26,24 @@ class Crud extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log('Data : ', this.state)
+        this.setState({
+            makanans : [
+                ...this.state.makanans,
+                {
+                    id : this.state.id.length+1,
+                    nama : this.state.nama,
+                    deskripsi : this.state.deskripsi,
+                    harga : this.state.harga
+                }
+            ]
+        })
+
+        this.setState({
+            nama : "",
+            deskripsi : "",
+            harga : 0,
+            id : ""
+        })
     }
 
     render() {
@@ -36,7 +53,7 @@ class Crud extends Component {
                 <div className="container mt-3">
                     <h2 className="text-center">CRUD Sederhana dengan React Js</h2>
                     <Formulir {...this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-                    <Tabel />
+                    <Tabel makanans={this.state.makanans} />
                 </div>
                 <Footer />
             </div>
