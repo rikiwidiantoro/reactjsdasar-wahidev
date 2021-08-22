@@ -74,7 +74,7 @@ class Crud extends Component {
         const makananygdipilih = this.state.makanans
         .filter((makanan) => makanan.id === id)
         .map((filterMakanan) => {
-            return filterMakanan
+            return filterMakanan;
         })
 
         this.setState({
@@ -86,7 +86,17 @@ class Crud extends Component {
     }
 
     hapusData = (id) => {
-        console.log("berhasil dihapus", id)
+        // console.log("berhasil dihapus", id)
+
+        const makananHapus = this.state.makanans
+        .filter((makanan) => makanan.id !== id)
+        .map((filterMakanan) => {
+            return filterMakanan;
+        })
+
+        this.setState({
+            makanans : makananHapus
+        })
     }
 
     render() {

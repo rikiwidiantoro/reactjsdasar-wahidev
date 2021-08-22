@@ -39,7 +39,10 @@ const Tabel = ({makanans, editData, hapusData}) => {
                             <td>{makanan.nama}</td>
                             <td>{makanan.deskripsi}</td>
                             <td>Rp. {makanan.harga}</td>
-                            <td><button className="btn btn-warning" onClick={() => editData(makanan.id)}>Edit Data</button></td>
+                            <td>
+                                <button className="btn btn-warning" onClick={() => editData(makanan.id)}>Edit Data</button>{' '}
+                                <button className="btn btn-danger" onClick={() => hapusData(makanan.id)}>Hapus Data</button>
+                            </td>
                         </tr>
                     )
                 })}
