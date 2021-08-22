@@ -46,6 +46,23 @@ class Crud extends Component {
         })
     }
 
+    editData = (id) => {
+        // console.log('ID : ', id)
+
+        const makananygdipilih = this.state.makanans
+        .filter((makanan) => makanan.id === id)
+        .map((filterMakanan) => {
+            return filterMakanan
+        })
+
+        this.setState({
+            nama : "",
+            deskripsi : "",
+            harga : 0,
+            id : ""
+        })
+    }
+
     render() {
         return (
             <div>
@@ -53,7 +70,7 @@ class Crud extends Component {
                 <div className="container mt-3">
                     <h2 className="text-center">CRUD Sederhana dengan React Js</h2>
                     <Formulir {...this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-                    <Tabel makanans={this.state.makanans} />
+                    <Tabel makanans={this.state.makanans} editData={this.editData} />
                 </div>
                 <Footer />
             </div>
