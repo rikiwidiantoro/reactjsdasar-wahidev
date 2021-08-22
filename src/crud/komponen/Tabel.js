@@ -32,10 +32,10 @@ const Tabel = ({makanans, editData}) => {
                     <td>Nasi goreng spesial dengan banyak kondimen</td>
                     <td>Rp. 10.000</td>
                 </tr> */}
-                {makanans.map((makanan) => {
+                {makanans.map((makanan, index) => {
                     return (
-                        <tr>
-                            <td>{makanan.id}</td>
+                        <tr key={index}>
+                            <td>{index + 1}</td>
                             <td>{makanan.nama}</td>
                             <td>{makanan.deskripsi}</td>
                             <td>Rp. {makanan.harga}</td>

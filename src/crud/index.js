@@ -26,17 +26,39 @@ class Crud extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        this.setState({
-            makanans : [
-                ...this.state.makanans,
-                {
-                    id : this.state.id.length+1,
-                    nama : this.state.nama,
-                    deskripsi : this.state.deskripsi,
-                    harga : this.state.harga
-                }
-            ]
-        })
+        if(this.state.id === "") {
+            this.setState({
+                makanans : [
+                    ...this.state.makanans,
+                    {
+                        id : this.state.id.length+1,
+                        nama : this.state.nama,
+                        deskripsi : this.state.deskripsi,
+                        harga : this.state.harga
+                    }
+                ]
+            })
+
+        } else {
+            const makananygselaindipilih = this.state.makanans
+            .filter((makanan) => makanan.id !== this.state.id)
+            .map((filterMakanan) => {
+                return filterMakanan
+            })
+
+            this.setState({
+                makanans : [
+                    ...makananygselaindipilih,
+                    {
+                        id : this.state.id.length+1,
+                        nama : this.state.nama,
+                        deskripsi : this.state.deskripsi,
+                        harga : this.state.harga
+                    }
+                ]
+            })
+        }
+
 
         this.setState({
             nama : "",
@@ -56,10 +78,10 @@ class Crud extends Component {
         })
 
         this.setState({
-            nama : "",
-            deskripsi : "",
-            harga : 0,
-            id : ""
+            nama : makananygdipilih[0].nama,
+            deskripsi : makananygdipilih[0].deskripsi,
+            harga : makananygdipilih[0].harga,
+            id : makananygdipilih[0].id,
         })
     }
 
