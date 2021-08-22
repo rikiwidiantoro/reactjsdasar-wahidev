@@ -85,6 +85,10 @@ class Crud extends Component {
         })
     }
 
+    hapusData = (id) => {
+        console.log("berhasil dihapus", id)
+    }
+
     render() {
         return (
             <div>
@@ -92,7 +96,7 @@ class Crud extends Component {
                 <div className="container mt-3">
                     <h2 className="text-center">CRUD Sederhana dengan React Js</h2>
                     <Formulir {...this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
-                    <Tabel makanans={this.state.makanans} editData={this.editData} />
+                    <Tabel makanans={this.state.makanans} editData={this.editData} hapusData={this.hapusData} />
                 </div>
                 <Footer />
             </div>
